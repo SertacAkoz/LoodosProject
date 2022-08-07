@@ -25,6 +25,7 @@ class CryptoRepository @Inject constructor(
     private var firebaseDatabase = FirebaseDatabase.getInstance("https://loodos-1f74e-default-rtdb.europe-west1.firebasedatabase.app")
 
     suspend fun updateDatabases(){
+
         try {
             val response = cryptoAPI.getCoinList()
             if (response.isSuccessful){
