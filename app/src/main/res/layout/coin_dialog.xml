@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="50dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <!--            android:background="@color/gray_btn_bg_color"-->
+        <ImageView
+            android:id="@+id/coinImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/textCoinName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="@dimen/coin_detail_string_text_size"
+            android:textColor="@color/darkBlue"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Price -> "-->
+<!--                android:textSize="@dimen/coin_detail_string_text_size"-->
+<!--                android:textColor="@color/darkBlue"-->
+<!--                android:textStyle="bold" />-->
+            <TextView
+                android:id="@+id/textCoinPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textSize="@dimen/coin_detail_string_text_size"
+                android:textColor="@color/darkBlue"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnGoDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_page_click_effect"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go Detail"
+            android:textSize="16sp"
+            android:textColor="@color/darkBlue"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

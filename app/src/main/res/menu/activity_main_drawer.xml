@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_128"
+            android:title="@string/menu_home" />
+<!--        <item-->
+<!--            android:id="@+id/nav_gallery"-->
+<!--            android:icon="@drawable/ic_menu_gallery"-->
+<!--            android:title="@string/menu_gallery" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_slideshow"-->
+<!--            android:icon="@drawable/ic_menu_slideshow"-->
+<!--            android:title="@string/menu_slideshow" />-->
+
+        <item
+            android:id="@+id/listFragment"
+            android:icon="@drawable/shop_128"
+            android:title="Coin Market" />
+
+        <item
+            android:id="@+id/searchFragment"
+            android:icon="@drawable/search_128"
+            android:title="Search Coin ( FirebaseDB )" />
+
+        <item
+            android:id="@+id/searchRoomFragment"
+            android:icon="@drawable/search_128"
+            android:title="Search Coin ( RoomDB )" />
+
+        <item
+            android:id="@+id/favoriteFragment"
+            android:icon="@drawable/favorite_128"
+            android:title="Favorite Coins" />
+    </group>
+</menu>

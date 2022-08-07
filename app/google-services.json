@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1056470184617",
+    "project_id": "loodos-1f74e",
+    "storage_bucket": "loodos-1f74e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056470184617:android:189114a9fc1d1c65bb6fb8",
+        "android_client_info": {
+          "package_name": "com.sertac.loodosproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1056470184617-54l1his8if2456lnth9ubleje4a32vs7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChqdbCEJ7AHLWW8S3xMA2pO5GPTQUiYJg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1056470184617-54l1his8if2456lnth9ubleje4a32vs7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

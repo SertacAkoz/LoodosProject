@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.sertac.loodosproject.view.activity.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.sertac.loodosproject.view.activity.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.sertac.loodosproject.view.activity.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.sertac.loodosproject.view.fragment.hamburger.ListFragment"
+        android:label="Coin Market"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.sertac.loodosproject.view.fragment.hamburger.DetailFragment"
+        android:label="Coin Detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.sertac.loodosproject.view.fragment.hamburger.SearchFragment"
+        android:label="Search Coin ( FireBaseDB )"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.sertac.loodosproject.view.fragment.hamburger.FavoriteFragment"
+        android:label="Favorite Coins"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/searchRoomFragment"
+        android:name="com.sertac.loodosproject.view.fragment.hamburger.SearchRoomFragment"
+        android:label="Search Coin ( RoomDB )"
+        tools:layout="@layout/fragment_seach_room" >
+        <action
+            android:id="@+id/action_searchRoomFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+</navigation>
