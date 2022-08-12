@@ -34,4 +34,12 @@ object Utils {
         val digest = md.digest(bytes)
         return digest.fold("", { str, it -> str + "%02x".format(it) })
     }
+
+    fun removeInvalidCharacters(string:String): String {
+        val re = Regex("[^A-Za-z0-9 ]")
+
+        val returnString = re.replace(string,"")
+
+        return returnString
+    }
 }

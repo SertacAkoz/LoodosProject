@@ -13,6 +13,7 @@ import com.sertac.loodosproject.roomdb.CoinRoom
 import com.sertac.loodosproject.util.Constants
 import com.sertac.loodosproject.util.CustomSharedPreferences
 import com.sertac.loodosproject.util.Resource
+import com.sertac.loodosproject.util.Utils
 import javax.inject.Inject
 
 class CryptoRepository @Inject constructor(
@@ -95,7 +96,8 @@ class CryptoRepository @Inject constructor(
     }
 
     fun insertFavoriteCoin(coin : Coin, myCallback: (result: Boolean) -> Unit){
-        val email : String = customSharedPreferences.getEmail().split("@")[0]
+//        val email : String = customSharedPreferences.getEmail().split("@")[0]
+        val email : String = Utils.removeInvalidCharacters(customSharedPreferences.getEmail().split("@")[0])
         firebaseDatabase.getReference(Constants.FAVORITE_PATH).child(email).child(coin.name).setValue(coin).addOnSuccessListener {
             println("CryptoRepository-insertFavoriteCoin --> Success")
             myCallback.invoke(true)
@@ -127,7 +129,9 @@ class CryptoRepository @Inject constructor(
 
     fun getCurrentUserFavoriteList(myCallback: (result: List<Coin>?) -> Unit){
         println("exampleGet-exampleGet-exampleGet-exampleGet-exampleGet-exampleGet")
-        val email : String = customSharedPreferences.getEmail().split("@")[0]
+
+//        val email : String = customSharedPreferences.getEmail().split("@")[0]
+        val email : String = Utils.removeInvalidCharacters(customSharedPreferences.getEmail().split("@")[0])
         firebaseDatabase.getReference(Constants.FAVORITE_PATH).child(email).get().addOnSuccessListener {
 
             if (it.exists()){
